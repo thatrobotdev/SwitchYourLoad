@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Laundry App</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="account.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk="
 	 crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css">
@@ -36,7 +37,26 @@
                 <span class="icon" style="padding-right: 10px;">
                   <i class="mdi mdi-clock-outline"></i>
                 </span>
-                3:08 PM
+                <script>
+                  var currentTime = new Date(),
+                      hours = currentTime.getHours(),
+                      minutes = currentTime.getMinutes();
+
+                  if (minutes < 10) {
+                  minutes = "0" + minutes;
+                  }
+
+                  var suffix = "AM";
+                  if (hours >= 12) {
+                    suffix = "PM";
+                    hours = hours - 12;
+                  }
+                  if (hours == 0) {
+                  hours = 12;
+                  }
+
+                  document.write(hours + ":" + minutes + " " + suffix)
+                </script>
               </span>
             </div>
           </div> 
@@ -58,25 +78,19 @@
             
             <div class="columns">
 
-              <div class="column card">
-                <a href="second.html">
-                <img src="https://via.placeholder.com/300" class="img-fluid circle" alt="Profile 1">
+              <div class="column card" onclick="tiger()">
+                <img src="Images/tiger@4x.png" class="img-fluid" alt="Profile 1" width="60%" height="60%">
                 <h2 class="profile-select-text">Tiger</h2>
-                </a>
               </div>
 
-              <div class="column card">
-                <a href="second.html">
-                <img src="Images/frog.png" class="img-fluid" alt="Profile 1" width="60%" height="60%">
+              <div class="column card" onclick="penguin()">
+                <img src="Images/penguin@4x.png" class="img-fluid" alt="Profile 1" width="60%" height="60%">
                 <h2 class="profile-select-text">Penguin</h2>
-                </a>
               </div>
 
-              <div class="column card">
-                <a href="second.html">
-                <img src="Images/frog.png" class="img-fluid" alt="Profile 1" width="60%" height="60%">
+              <div class="column card" onclick="frog()">
+                <img src="Images/frog@4x.png" class="img-fluid" alt="Profile 1" width="60%" height="60%">
                 <h2 class="profile-select-text">Frog</h2>
-                </a>
               </div>
             </div>
       
