@@ -1,7 +1,7 @@
 function startTimer(duration, display) {
   var timer = duration, minutes, seconds;
     var countDown = setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
+        minutes = parseInt(timer / 600, 10);
         seconds = parseInt(timer % 60, 10);
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -36,9 +36,10 @@ window.onload = function() {
     } else {
       document.getElementById("title").textContent = localStorage.getItem('user') + "'s " + localStorage.getItem('load') + " load is in progress!";
   }
-
+  
   var minutesToSeconds = 6 * localStorage.getItem('minutes');
-  var timeInSeconds = minutesToSeconds + localStorage.getItem('seconds');
+  var seconds = localStorage.getItem('seconds');
+  var timeInSeconds = minutesToSeconds + seconds;
 
   display = document.querySelector('#timer-text');
   startTimer(timeInSeconds, display);
