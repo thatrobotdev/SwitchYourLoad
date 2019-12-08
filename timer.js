@@ -1,7 +1,7 @@
 function startTimer(duration, display) {
   var timer = duration, minutes, seconds;
     var countDown = setInterval(function () {
-        minutes = parseInt(timer / 600, 10);
+        minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
