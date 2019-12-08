@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Laundry App</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="loadselect.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css" integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk="
 	 crossorigin="anonymous" />
 	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css">
@@ -69,36 +70,35 @@
       <div class="hero-body">
         <div class="container has-text-centered">
 
-          <!-- need to figure out how to make it individual to profile -->
             <section class="section hello">
               <div class="container">
-                <h2 class="title">Hello, Profile</h2>
+                <h2 class="title" id="title">Something isn't right, taking you back to homepage.</h2>
                 <h2 class="subtitle">Select a Load Type</h2>
               </div>
             </section>
             
             <div class="columns">
 
-              <div class="column card">
-                <a href="http://switchyourload.com/">
+              <div class="column card" onclick="whites()">
                 <img src="https://via.placeholder.com/300" class="img-fluid circle" alt="Profile 1">
-                <h2 class="profile-select-text">First Type</h2>
-                </a>
+                <h2 class="profile-select-text">Whites</h2>
               </div>
 
-              <div class="column card">
-                <a href="http://switchyourload.com/">
+              <div class="column card" onclick="darks()">
                 <img src="https://via.placeholder.com/300" class="img-fluid circle" alt="Profile 2">
-                <h2 class="profile-select-text">Second Type</h2>
-                </a>
+                <h2 class="profile-select-text">Darks</h2>
               </div>
 
-              <div class="column card">
-                <a href="http://switchyourload.com/">
+              <div class="column card" onclick="lights()">
                 <img src="https://via.placeholder.com/300" class="img-fluid circle" alt="Profile 3">
-                <h2 class="profile-select-text">Third Type</h2>
-                </a>
+                <h2 class="profile-select-text">Lights</h2>
               </div>
+
+              <div class="column card" onclick="delicates()">
+                <img src="https://via.placeholder.com/300" class="img-fluid circle" alt="Profile 3">
+                <h2 class="profile-select-text">Delicates</h2>
+              </div>
+              
             </div>
       
           </div>

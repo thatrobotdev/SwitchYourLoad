@@ -1,18 +1,23 @@
+localStorage.clear();
+localStorage.setItem('user', 'none');
+localStorage.setItem('load', 'none');
+localStorage.setItem('started', 'none');
+
 function loadSelect() {
   window.location.href = "/loadselect.html";
 }
 
 function frog() {
-  localStorage.user = "frog";
-  loadSelect()
+  localStorage.setItem('user', 'Frog');
+  loadSelect();
 }
 
 function tiger() {
-  localStorage.user = "tiger";
-  loadSelect()
+  localStorage.setItem('user', 'Tiger');
+  loadSelect();
 }
 
 function penguin() {
-  localStorage.user = "penguin";
-  loadSelect()
+  localStorage.setItem('user', 'Penguin');
+  loadSelect();
 }
